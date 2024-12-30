@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form{
+    position: relative;
+    margin-top: 50px;
+
+}
+
+#icons{
+     border: #ccc solid 1px;
+     border-radius: 50%;
+     padding: 10px;
+     background-color:aliceblue;
+}
+
+
+
+.search-input{
+    width: 300px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 40px;
+    border: none;
+}
+
+
+#sign-in{
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    background-color: #797DFC;
+    border: 1px solid #333;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    
+    left: 240px;
+    top: 5px;
+    border: none;
+}
+.search-btn{
+    position: absolute;
+}
+
+.form-list{
+    border: #333 solid 1px;
+    width: 300px;
+    height: 250px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: #fff;
+}
+.form-list p{
+    margin: 40px;
+    color: black;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    margin: 100px;
+    margin-top: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 40px;
+
+}
+.header h1{
+    font-size: 40px;
+    margin: 80px 20px 20px;
+    gap: 100px;
+}
+.list-container img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    margin: 20px;
+    
+}
+
+.list-container{
+    width: 700px;
+    height: 200px; ;
+    border: #333 solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+}
