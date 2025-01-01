@@ -40,7 +40,7 @@ const fetchListData = async () => {
         ListContainer.appendChild(cardDiv);
         
         searchButton.addEventListener('click', (e) => {
-            e.preventDefault();
+            e.preventDefault();J
             const query = searchInput.value.trim();
             fetchListData(query); // Fetch data with the search query
         });
