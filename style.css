@@ -1,3 +1,11 @@
+
+.mulish-thin-regular-bold-extra-bold-italic {
+  font-family: "Mulish", serif;
+  font-optical-sizing: auto;
+  font-weight: 200, 300, 400, 500, 600, 700, 800, 900;
+  font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,10 +16,11 @@ body{
     
 }
 
-.navigation {
+.navigation{
     display: flex;
     justify-content: space-between;
 }
+
 
 .form{
     position: relative;
@@ -101,4 +110,59 @@ body{
     border: #333 solid 1px;
     border-radius: 20px;
     padding: 20px;
+}
+
+.card-row{
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 16px;
+    margin: 50px 70px;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 20px;
+    align-items: flex-start;
+    width: 700px;
+    height: 250px;
+}
+
+.card-row img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 20px;
+    position: relative;
+    object-fit: cover;
+    bottom: 10px;
+}
+.card-circle{
+    border:#fff solid 5px;
+    border-radius:50%;
+    padding: 10px;
+    background-color:blue;
+    position: absolute;
+    left: 180px;
+
+    /* z-index: 10; */
+    
+   
+}
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font: 20;
+}
+.card-category{
+    display: flex;
+    gap: 20px;
+    font:5;
+}
+.card-date{
+    display: none;
+}
+.card-icons{
+    display: flex;
+    gap: 30px;
 }
