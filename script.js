@@ -1,19 +1,27 @@
-
-
 const ListContainer = document.getElementById('list-container');
-const searchInput = document.querySelector('.search-input');
-const searchButton = document.querySelector('.search-btn');
+const searchButton = document.getElementById("search");
+const searchValue = document.getElementById("search-value");
+const detailsButton = document.getElementById("details-button-id");
 
-const fetchListData = async () => {
-    const url = `https://openapi.programming-hero.com/api/retro-forum/posts`;
+
+
+const fetchListData = async (search) => {
+    const url = "https://openapi.programming-hero.com/api/retro-forum/posts";
     const response = await fetch(url);
     const data = await response.json();
+    let searchPosts = []
 
-    console.log(data);
+    if (search?.length) {
+        searchPosts = data.posts.filter(post => post.category == search)
+        console.log(searchPosts)
+    } else {
+        searchPosts = data.posts
+    }
+
     ListContainer.innerHTML = "";
-    data?.posts?.forEach(post => {
+    searchPosts.forEach(post => {
         const cardDiv = document.createElement("div");
-        cardDiv.classList.add('card' , 'card-row');
+        cardDiv.classList.add('card', 'card-row');
         cardDiv.innerHTML = `
         <img src="${post.image}"class="card-image"/>
         <div class="card-circle" style="background-color: ${post.isActive ? 'green' : 'red'};">
@@ -33,21 +41,49 @@ const fetchListData = async () => {
        <i class="fa-regular fa-clock">${post.posted_time}</i>
         </div>
         </div>
-        
+        <button class="details-button" id="details-button-id">Show Details</button>
+
         
         `;
-        
         ListContainer.appendChild(cardDiv);
+
         
-        searchButton.addEventListener('click', (e) => {
-            e.preventDefault();J
-            const query = searchInput.value.trim();
-            fetchListData(query); // Fetch data with the search query
-        });
     });
-    
-   
-  
-   
+
 }
+
+
 fetchListData()
+
+
+searchButton.addEventListener("click", function () {
+    fetchListData(searchValue.value)
+})
+
+const LatestPost= document.getElementById("Latest-Post");
+
+const fetchLatestData = async () => {
+    const url = "https://openapi.programming-hero.com/api/retro-forum/latest-posts";
+    const response = await fetch(url);
+    const data = await response.json();
+}
+
+LatestPost.innerHTML = "";
+data?.posts?.forEach(post => {
+    const latestDiv = document.createElement("div");
+    latestDiv.classList.add('Box', 'data-box');
+    latestDiv.innerHTML = `
+     <img src="${post.cover_image}"class="box-image"/>
+     <h6 class="box-date">${post.isActive}</h6>
+     <h2 class="box-title">${post.title}</h2>
+     <p class="box-description">${post.description}</p>
+     <img src="${post.author.image}"class="box-author-image"/>
+     
+     `;
+    
+    LatestPost.appendChild(latestDiv);
+});
+
+fetchLatestData()
+
+
