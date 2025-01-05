@@ -1,83 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="navigation">
-    <nav>
-        <h1>ReTro</h1>
-    </nav>
-    <nav>
-        <i id="icons" class="fa-solid fa-house"></i>
-        <i id="icons"  class="fa-solid fa-pen"></i>
-        <i id="icons"  class="fa-solid fa-user-plus"></i>
-        <i id="icons" class="fa-regular fa-flag"></i>
-        <button id="sign-in"> Sign In</button>
-    </nav>
-</div>
+        <nav>
+            <h1>ReTro</h1>
+        </nav>
+        <nav>
+            <i title="home" id="icons" class="fa-solid fa-house"></i>
+            <i title="edit" id="icons" class="fa-solid fa-pen"></i>
+            <i title="add" id="icons" class="fa-solid fa-user-plus"></i>
+            <i title="flag" id="icons" class="fa-regular fa-flag"></i>
+            <button id="sign-in"> Sign In</button>
+        </nav>
+    </div>
     <header class="header">
         <div class="header-content">
             <h1>Welcome To The <br> Retro Forum </br> </h1>
             <p>share your fav opinion and win any gift</p>
             <div class="form" onclick="">
-            <input type="text" placeholder="Search here anything" class="search-input" id="search-value"/>
-            <button id="search" class="search-btn" >Search</button>
+                <input type="text" placeholder="Search here anything" class="search-input" id="search-value" />
+                <button id="search" class="search-btn">Search</button>
             </div>
         </div>
         <div class="form-list">
             <p> Registerd user 01</p>
-            <p>Form  01</p>
-            <p>Topic  01</p>
+            <p>Form 01</p>
+            <p>Topic 01</p>
             <p>Replies 01</p>
         </div>
     </header>
 
-    <main>
+    <main class="Headlines">
         <h1>Let's Discuss</h1>
-        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features
+            allow for a streamlined .</p>
         <section>
 
-        <div id="list-container">
-            <!-- <image src="https://i.ibb.co/0QRxkd5/pexels-jan-kop-iva-3525908.jpg" alt="image" class="image"/>
-            <h3>Author : Awlad Hossain</h3>
-            <h1>10 Kids Unaware of Their Halloween Costume</h1>
-            <p>It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
-         -->
-            
-        </div>
-    </section>
+            <div class="middle-content">
+                <div id="list-container"></div>
+
+                <div id="read-post-container">
+
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <section class="Banner">
-        <div class="middle-content">
+        <div class="banner-content">
             <h1>Join Our Forum</h1>
             <p>share your fav opinion and win any gift</p>
-            <button class="banner-btn" >Registerd Now</button>
+            <button class="banner-btn">Registerd Now</button>
         </div>
         <div class="banner-image">
-            <img src="./B9A6-Retro-Forum-main/images/joinforum.png"/>
+            <img src="./B9A6-Retro-Forum-main/images/joinforum.png" />
         </div>
     </section>
 
-    <section>
+    <section class="Headlines">
         <h1>Latest Posts</h1>
-        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .
+        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features
+            allow for a streamlined .
         </p>
 
-        <div class="Latest-Post">
+        <div id="Latest-Post">
 
 
         </div>
     </section>
+
+    <footer class="footer">
+        <h1>Re Tro</h1>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+        <div class="footer-icons">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+    </div>
+    </footer>
+
     <script src="./script.js"></script>
 </body>
+
 </html>
